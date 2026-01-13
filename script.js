@@ -1,14 +1,23 @@
-function calc() {
-  let m = document.getElementById("mark").value;
-  let g = "";
+function calculate() {
+  let fa = Number(document.getElementById("fa").value);
+  let sa = Number(document.getElementById("sa").value);
+  let total = fa + sa;
+  let grade = "";
 
-  if (m >= 90) g = "A1";
-  else if (m >= 80) g = "A2";
-  else if (m >= 70) g = "B1";
-  else if (m >= 60) g = "B2";
-  else if (m >= 50) g = "C1";
-  else if (m >= 40) g = "C2";
-  else g = "Fail";
+  if (total >= 91) grade = "A1";
+  else if (total >= 81) grade = "A2";
+  else if (total >= 71) grade = "B1";
+  else if (total >= 61) grade = "B2";
+  else if (total >= 51) grade = "C1";
+  else if (total >= 41) grade = "C2";
+  else grade = "D";
 
-  document.getElementById("result").innerHTML = "Grade: " + g;
+  document.getElementById("result").innerHTML =
+    "Total : " + total + "<br>Grade : " + grade;
+}
+
+function clearAll() {
+  document.getElementById("fa").value = "";
+  document.getElementById("sa").value = "";
+  document.getElementById("result").innerHTML = "";
 }
