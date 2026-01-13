@@ -1,1 +1,4 @@
-# cce-grade-calculator
+index.html
+style.css
+script.js
+logo.png
